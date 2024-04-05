@@ -1,0 +1,27 @@
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 155px;
+  background-color: #ffe79a;
+}
+
+.sidebar-logo img{
+  width: 150px;
+  padding: 0;
+}
+
+.sidebar-icons{
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 60%;
+}
+.sidebar-fa-icon{
+    margin: 10px;
+    font-size: 35px;
+    color: #d86635df;
+}
