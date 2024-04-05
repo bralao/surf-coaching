@@ -1,10 +1,11 @@
 import './App.css';
-import logo from './components/logo.png'
+import React from 'react'
+import SideBar from './components/sideBar/sideBar'
 
 function App() {
   return (
     <div className="App">
-      <img alt="" src={logo}/>
+      <SideBar/>
     </div>
   );
 }
