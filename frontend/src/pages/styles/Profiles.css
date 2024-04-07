@@ -1,0 +1,23 @@
+.title, .navbar{
+  text-align: center;
+  justify-content: center;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+
+.navbar p{
+  width: 170px;
+  padding: 3px;
+  background-color: #a7a7a7;
+  color: #eaf5fc;
+  border-radius: 100px;
+}
+
+.title h1{
+  font-size: 35px;
+  color: #3f3f3f;
+}

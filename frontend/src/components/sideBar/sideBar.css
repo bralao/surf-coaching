@@ -1,15 +1,6 @@
-.sidebar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 155px;
-  background-color: #ffe79a;
-}
-
 .sidebar-logo img{
-  width: 150px;
-  padding: 0;
+  width: 140px;
+  padding: 5px;
 }
 
 .sidebar-icons{
@@ -23,5 +14,5 @@
 .sidebar-fa-icon{
     margin: 10px;
     font-size: 35px;
-    color: #d86635df;
+    color: #a7a7a7;
 }
