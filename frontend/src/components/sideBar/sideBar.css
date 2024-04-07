@@ -11,8 +11,18 @@
   justify-content: space-around;
   height: 60%;
 }
-.sidebar-fa-icon{
-    margin: 10px;
-    font-size: 35px;
-    color: #a7a7a7;
+.sidebar-icon{
+  padding: 25px;
+  font-size: 35px;
+  color: #a7a7a7;
+}
+
+.sidebar-icon:hover{
+  color: #3f3f3f;
+  background-color: rgb(203, 203, 203);
+  border-radius: 100px;
+}
+
+.sidebar-icon.selected{
+  color: #3f3f3f;
 }
