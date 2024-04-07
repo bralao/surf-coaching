@@ -1,5 +1,6 @@
 # what i installed
 npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+npm install react-router-dom
 
 
 

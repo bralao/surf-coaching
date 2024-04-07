@@ -1,0 +1,18 @@
+.sidebar{
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  height: 90%;
+  width: 150px;
+  background-color: #e3e3e3;
+  border-radius: 100px;
+}
+
+.routes {
+  position: fixed;
+  top: 0;
+  left: 160px;
+  height: 100%;
+  width: calc(100% - 160px);
+  padding: 5px;
+}
