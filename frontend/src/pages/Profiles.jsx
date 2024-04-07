@@ -8,10 +8,9 @@ const Profiles = () => {
         <h1>Profiles</h1>
       </div>
       <div className="navbar">
-        <p>All</p>
         <p>Intermediates</p>
         <p>Advanceds</p>
-        <p>Competition</p>
+        <p>High-Performance</p>
       </div>
     </div>
   )
