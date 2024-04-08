@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './sideBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faCalendarDays, faClipboard, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCalendarDays, faClipboard, faUser, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom'
 
 
@@ -25,16 +25,21 @@ const SideBar = () => {
         />
         <FontAwesomeIcon
           icon={faClipboard}
-          className={`sidebar-icon ${selectedIcon === 'clipboard' ? 'selected' : ''}`}
-          onClick={() => setSelectedIcon('clipboard')}
+          className={`sidebar-icon ${selectedIcon === 'sessions' ? 'selected' : ''}`}
+          onClick={() => setSelectedIcon('sessions')}
         />
         <Link to="/profiles">
           <FontAwesomeIcon
-            icon={faUser}
-            className={`sidebar-icon ${selectedIcon === 'profiles' ? 'selected' : ''}`}
-            onClick={() => setSelectedIcon('profiles')}
+            icon={faUsers}
+            className={`sidebar-icon ${selectedIcon === 'athletes' ? 'selected' : ''}`}
+            onClick={() => setSelectedIcon('athletes')}
           />
         </Link>
+        <FontAwesomeIcon
+          icon={faUser}
+          className={`sidebar-icon ${selectedIcon === 'user' ? 'selected' : ''}`}
+          onClick={() => setSelectedIcon('user')}
+        />
       </div>
     </div>
   )

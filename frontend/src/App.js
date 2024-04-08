@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import SideBar from './components/sideBar/sideBar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Profiles from './pages/Profiles'
+import Profiles from './pages/Athletes'
 
 function App() {
   return (

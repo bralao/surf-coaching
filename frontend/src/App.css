@@ -39,7 +39,7 @@
   .sidebar{
     background-color: #e2e1e1;
     width: 60px;
-    height: 40%;
+    height: 44%;
     border-radius: 100px;
     margin-top: 220px;
     margin-right: 10px;
@@ -48,7 +48,8 @@
 
 @media (min-width: 800px) {
   .sidebar{
-    height: 400px;
+    height: 426px;
+    width: 70px;
   }
 }
 

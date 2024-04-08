@@ -1,7 +1,7 @@
 .sidebar-icons{
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .sidebar-icon{
@@ -32,8 +32,8 @@
     margin-top: 30px;
   }
   .sidebar-icon {
-    padding: 15px;
-    font-size: 28px;
+    padding: 12px;
+    font-size: 26px;
   }
 }
 

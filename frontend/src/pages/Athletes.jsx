@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/Profiles.css'
+import './styles/Athletes.css'
 
 const Profiles = () => {
   return (
@@ -10,7 +10,8 @@ const Profiles = () => {
       <div className="navbar">
         <p>Intermediates</p>
         <p>Advanceds</p>
-        <p>High-Performance</p>
+        <p>High Performance</p>
+        <p>All</p>
       </div>
     </div>
   )
