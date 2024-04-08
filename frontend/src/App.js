@@ -7,17 +7,19 @@ import Profiles from './pages/Profiles'
 function App() {
   return (
     <div className="app">
-      <BrowserRouter>
-        <SideBar className="sidebar"/>
-        <div className="routes">
-          <Routes>
-            <Route path="/" element={<h1>Home</h1>} />
-            <Route path="/calendar" element={<h1>Calendar</h1>} />
-            <Route path="/sessions" element={<h1>Sessions</h1>} />
-            <Route path="/profiles" element={<Profiles/>} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+      <div className="main-layout">
+        <BrowserRouter>
+          <div className="main-content">
+            <Routes>
+              <Route path="/" element={<h1>Home</h1>} />
+              <Route path="/calendar" element={<h1>Calendar</h1>} />
+              <Route path="/sessions" element={<h1>Sessions</h1>} />
+              <Route path="/profiles" element={<Profiles/>} />
+            </Routes>
+          </div>
+          <SideBar className="sidebar"/>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }

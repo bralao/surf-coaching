@@ -5,12 +5,11 @@
 
 .navbar{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   font-size: 20px;
 }
 
 .navbar p{
-  width: 195px;
   padding: 3px;
   background-color: #3f3f3f;
   color: white;
