@@ -1,20 +1,13 @@
-.sidebar-logo img{
-  width: 140px;
-  padding: 5px;
+.sidebar-icons{
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-.sidebar-icons{
-  margin-top: 90px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 60%;
-}
 .sidebar-icon{
-  padding: 25px;
-  font-size: 35px;
   color: #a7a7a7;
+  padding: 10px;
+  font-size: 24px;
 }
 
 .sidebar-icon:hover{
@@ -25,4 +18,54 @@
 
 .sidebar-icon.selected{
   color: #3f3f3f;
+}
+
+@media (min-width: 500px){
+  .sidebar-icons {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 800px) {
+  .sidebar-icons {
+    margin-top: 30px;
+  }
+  .sidebar-icon {
+    padding: 15px;
+    font-size: 28px;
+  }
+}
+
+
+
+@media(max-width: 1280px){
+  /*.sidebar-icon{
+    padding: 15px;
+    font-size: 26px;
+  } */
+}
+
+
+@media(max-width: 800px){
+ /*
+  .sidebar-icons{
+    margin-top: 50px;
+  }
+  .sidebar-icon{
+    padding: 10px;
+    font-size: 22px;
+  } */
+}
+
+@media(max-width: 500px){
+  /* .sidebar-icons {
+    flex-direction: row;
+    margin-top: 16px;
+    width: 80%;
+  }
+  .sidebar-icon {
+    padding: 10px;
+    font-size: 24px;
+  } */
 }
