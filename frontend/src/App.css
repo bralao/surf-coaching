@@ -14,6 +14,7 @@
 
 .main-content{
   flex: 1;
+  padding: 2px;
 }
 
 .sidebar{
@@ -34,6 +35,7 @@
   .main-content{
     padding-left: 10px;
     padding-right: 10px;
+    width: calc(100% - 80px);
   }
 
   .sidebar{
@@ -51,57 +53,4 @@
     height: 426px;
     width: 70px;
   }
-}
-
-
-
-
-
-
-
-@media(max-width: 1280px){
-  /* .sidebar{
-    top: 100px;
-    left: 10px;
-    width: 120px;
-    height: 80%;
-  }
-  .main-content{
-    left: 130px;
-    width: calc(100% - 120px);
-  } */
-}
-
-@media(max-width: 800px){
-  /* .sidebar{
-    top: 170px;
-    left: 10px;
-    width: 80px;
-    height: 60%;
-  }
-  .main-content{
-    left: 90px;
-    width: calc(100% - 80px);
-  } */
-}
-
-@media(max-width: 500px){
-  /*sidebar turns downbar*/
-  /* .sidebar{
-    top: auto;
-    left: 10px;
-    bottom: 10px;
-    height: 80px;
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-  }
-  .main-content{
-    top: 0;
-    left: 0;
-    width: 98%;
-    height: calc(100% - 100px);
-  } */
-
 }
