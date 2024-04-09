@@ -28,7 +28,7 @@ const SideBar = () => {
           className={`sidebar-icon ${selectedIcon === 'sessions' ? 'selected' : ''}`}
           onClick={() => setSelectedIcon('sessions')}
         />
-        <Link to="/profiles">
+        <Link to="/athletes">
           <FontAwesomeIcon
             icon={faUsers}
             className={`sidebar-icon ${selectedIcon === 'athletes' ? 'selected' : ''}`}

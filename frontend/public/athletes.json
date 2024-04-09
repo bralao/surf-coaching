@@ -6,13 +6,13 @@
     "birthdate": "1990-01-01",
     "height": 174,
     "weight": 76,
-    "level": "advanced",
-    "personal-objective": "snaps",
-    "month-objective": "improve bottom turn",
-    "3-month-objective": "improve lip maneuvers reading",
-    "sessions-completed": 3,
-    "sessions-missed": 1,
-    "average-waves-per-session": 12
+    "skillLevel": "Advanced",
+    "personalObjective": "snaps",
+    "monthObjective": "improve bottom turn",
+    "3monthObjective": "improve lip maneuvers reading",
+    "sessionsCompleted": 3,
+    "sessionsMissed": 1,
+    "averageWavesPerSession": 12
   },
   {
     "id": 2,
@@ -21,13 +21,13 @@
     "birthdate": "1990-01-01",
     "height": 179,
     "weight": 70,
-    "level": "advanced",
-    "personal-objective": "Bigger barrels",
-    "month-objective": "Improve wave reading",
-    "3-month-objective": "Improve bottom turn",
-    "sessions-completed": 2,
-    "sessions-missed": 2,
-    "average-waves-per-session": 17
+    "skillLevel": "Advanced",
+    "personalObjective": "Bigger barrels",
+    "monthObjective": "Improve wave reading",
+    "3monthObjective": "Improve bottom turn",
+    "sessionsCompleted": 2,
+    "sessionsMissed": 2,
+    "averageWavesPerSession": 17
   },
   {
     "id": 3,
@@ -36,13 +36,13 @@
     "birthdate": "1990-01-01",
     "height": 179,
     "weight": 70,
-    "level": "intermediate",
-    "personal-objective": "Bigger barrels",
-    "month-objective": "Improve wave reading",
-    "3-month-objective": "Improve bottom turn",
-    "sessions-completed": 2,
-    "sessions-missed": 2,
-    "average-waves-per-session": 17
+    "skillLevel": "Intermediate",
+    "personalObjective": "Bigger barrels",
+    "monthObjective": "Improve wave reading",
+    "3monthObjective": "Improve bottom turn",
+    "sessionsCompleted": 2,
+    "sessionsMissed": 2,
+    "averageWavesPerSession": 17
   },
   {
     "id": 4,
@@ -51,13 +51,13 @@
     "birthdate": "1990-01-01",
     "height": 179,
     "weight": 70,
-    "level": "high performance",
-    "personal-objective": "Win world title",
-    "month-objective": "Fun, gratefullness and hard-work",
-    "3-month-objective": "Make the final 5",
-    "sessions-completed": 4,
-    "sessions-missed": 0,
-    "average-waves-per-session": 15
+    "skillLevel": "High Performance",
+    "personalObjective": "Win world title",
+    "monthObjective": "Fun, gratefullness and hardWork",
+    "3monthObjective": "Make the final 5",
+    "sessionsCompleted": 4,
+    "sessionsMissed": 0,
+    "averageWavesPerSession": 15
   },
   {
     "id": 5,
@@ -66,12 +66,12 @@
     "birthdate": "1990-01-01",
     "height": 179,
     "weight": 70,
-    "level": "high performance",
-    "personal-objective": "Win world title",
-    "month-objective": "Fun, gratefullness and hard-work",
-    "3-month-objective": "Stay on top 5",
-    "sessions-completed": 4,
-    "sessions-missed": 0,
-    "average-waves-per-session": 15
+    "skillLevel": "High Performance",
+    "personalObjective": "Win world title",
+    "monthObjective": "Fun, gratefullness and hardWork",
+    "3monthObjective": "Stay on top 5",
+    "sessionsCompleted": 4,
+    "sessionsMissed": 0,
+    "averageWavesPerSession": 15
   }
 ]
