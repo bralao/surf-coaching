@@ -43,9 +43,6 @@ const Athletes = () => {
           <h1>Athletes</h1>
         </div>
 
-
-
-
         <div className="athletes-navbar">
           <Box sx={{ minWidth: 180 }}>
             <TextField

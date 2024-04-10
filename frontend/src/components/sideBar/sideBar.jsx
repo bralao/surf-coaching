@@ -13,21 +13,27 @@ const SideBar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-icons">
-        <FontAwesomeIcon
-          icon={faHouse}
-          className={`sidebar-icon ${selectedIcon === 'home' ? 'selected' : ''}`}
-          onClick={() => setSelectedIcon('home')}
-        />
-        <FontAwesomeIcon
-          icon={faCalendarDays}
-          className={`sidebar-icon ${selectedIcon === 'calendar' ? 'selected' : ''}`}
-          onClick={() => setSelectedIcon('calendar')}
-        />
-        <FontAwesomeIcon
-          icon={faClipboard}
-          className={`sidebar-icon ${selectedIcon === 'sessions' ? 'selected' : ''}`}
-          onClick={() => setSelectedIcon('sessions')}
-        />
+        <Link to="/">
+          <FontAwesomeIcon
+            icon={faHouse}
+            className={`sidebar-icon ${selectedIcon === 'home' ? 'selected' : ''}`}
+            onClick={() => setSelectedIcon('home')}
+          />
+        </Link>
+        <Link to="/calendar">
+          <FontAwesomeIcon
+            icon={faCalendarDays}
+            className={`sidebar-icon ${selectedIcon === 'calendar' ? 'selected' : ''}`}
+            onClick={() => setSelectedIcon('calendar')}
+          />
+        </Link>
+        <Link to="/sessions">
+          <FontAwesomeIcon
+            icon={faClipboard}
+            className={`sidebar-icon ${selectedIcon === 'sessions' ? 'selected' : ''}`}
+            onClick={() => setSelectedIcon('sessions')}
+          />
+        </Link>
         <Link to="/athletes">
           <FontAwesomeIcon
             icon={faUsers}
@@ -35,11 +41,13 @@ const SideBar = () => {
             onClick={() => setSelectedIcon('athletes')}
           />
         </Link>
-        <FontAwesomeIcon
-          icon={faUser}
-          className={`sidebar-icon ${selectedIcon === 'user' ? 'selected' : ''}`}
-          onClick={() => setSelectedIcon('user')}
-        />
+        <Link to="/user">
+          <FontAwesomeIcon
+            icon={faUser}
+            className={`sidebar-icon ${selectedIcon === 'user' ? 'selected' : ''}`}
+            onClick={() => setSelectedIcon('user')}
+          />
+        </Link>
       </div>
     </div>
   )
