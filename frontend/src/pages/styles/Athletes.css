@@ -64,6 +64,11 @@
   border: 1px solid #e4e4e4;
 }
 
+.athlete-list a{
+  text-decoration: none;
+  color: #3f3f3f;
+}
+
 
 @media (min-width: 640px) {
   .title h1{
