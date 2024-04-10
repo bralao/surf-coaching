@@ -5,7 +5,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faBoxArchive } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 /* import AthleteProfile from '../components/athleteprofile/AthleteProfile'; // Import the child component
  */
 const Athletes = () => {
@@ -44,7 +44,7 @@ const Athletes = () => {
         </div>
 
         <div className="athletes-navbar">
-          <Box sx={{ minWidth: 180 }}>
+          <Box sx={{ minWidth: 140 }}>
             <TextField
               select
               label="Skill Level"
@@ -53,12 +53,13 @@ const Athletes = () => {
               fullWidth
             >
               <MenuItem value="All Levels">All Levels</MenuItem>
-              <MenuItem value="High Performance">High Performance</MenuItem>
+              <MenuItem value="Performance">Performance</MenuItem>
               <MenuItem value="Advanced">Advanced</MenuItem>
               <MenuItem value="Intermediate">Intermediate</MenuItem>
+              <MenuItem value="Beginner">Beginner</MenuItem>
             </TextField>
           </Box>
-          <Box sx={{ width: 180 }}>
+          <Box className="search-name-box" sx={{ width: 170 }}>
             <Autocomplete
               disablePortal
               id="athlete-search"
@@ -67,17 +68,15 @@ const Athletes = () => {
               onChange={(event, newValue) => {
                 setSearchQuery(newValue);
               }}
-              renderInput={(params) => <TextField {...params} label="Surfer Name" />}
+              renderInput={(params) => <TextField {...params} label="Search" />}
             />
           </Box>
-        </div>
-
-        <div className="title-bar-icons">
           <FontAwesomeIcon icon={faPlus} className="add-btn" />
-          <FontAwesomeIcon icon={faBoxArchive} className="archive-btn" />
         </div>
-
-
+        <div className="title-bar-icons">
+          <button className="current-btn">Current</button>
+          <button className="archive-btn">Archive</button>
+        </div>
 
       </div>
 
