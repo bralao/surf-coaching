@@ -73,16 +73,17 @@ const Athletes = () => {
           </Box>
           <FontAwesomeIcon icon={faPlus} className="add-btn" />
         </div>
-        <div className="title-bar-icons">
-          <button className="current-btn">Current</button>
-          <button className="archive-btn">Archive</button>
-        </div>
+      </div>
 
+      <div className="current-archive-filter">
+        <button className="current-btn">Current</button>
+        <button className="archive-btn">Archive</button>
       </div>
 
       <div className="athlete-list">
         {filteredAthletes.map((athlete, index) => (
           <div className="athlete-item" key={index}>
+            <img src={athlete.photo} alt="athlete" />
             <p>{athlete.name}</p>
           </div>
         ))}
