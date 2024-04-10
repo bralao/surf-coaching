@@ -7,6 +7,7 @@ import Calendar from './pages/Calendar'
 import Sessions from './pages/Sessions'
 import Athletes from './pages/Athletes'
 import User from './pages/User'
+import AthleteProfile from './components/athleteprofile/AthleteProfile'
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
               <Route path="/sessions" element={<Sessions/>} />
               <Route path="/athletes" element={<Athletes/>} />
               <Route path="/user" element={<User/>} />
+
+              <Route path="/athletes/:id" element={<AthleteProfile/>} />
             </Routes>
           </div>
           <SideBar className="sidebar"/>

@@ -6,8 +6,8 @@ import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-/* import AthleteProfile from '../components/athleteprofile/AthleteProfile'; // Import the child component
- */
+import { Link } from 'react-router-dom';
+
 const Athletes = () => {
   const [skillLevel, setSkillLevel] = useState('All Levels');
   const [searchQuery, setSearchQuery] = useState(null);
@@ -82,10 +82,12 @@ const Athletes = () => {
 
       <div className="athlete-list">
         {filteredAthletes.map((athlete, index) => (
-          <div className="athlete-item" key={index}>
-            <img src={athlete.photo} alt="athlete" />
-            <p>{athlete.name}</p>
-          </div>
+          <Link to={`/athletes/${athlete.id}`}>
+            <div className="athlete-item" key={index}>
+              <img src={athlete.photo} alt="athlete" />
+              <p>{athlete.name}</p>
+            </div>
+          </Link>
         ))}
       </div>
 
