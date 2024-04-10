@@ -2,7 +2,8 @@
   {
     "id": 1,
     "name": "Filippo Gallizia",
-    "email": "filipo@gmail.com",
+    "photo": "../athletesPhoto/filippo.png",
+    "email": "filippo@gmail.com",
     "birthdate": "1990-01-01",
     "height": 174,
     "weight": 76,
@@ -17,6 +18,7 @@
   {
     "id": 2,
     "name": "Vasco Berger",
+    "photo": "../athletesPhoto/berger.png",
     "email": "vasco@gmail.com",
     "birthdate": "1990-01-01",
     "height": 179,
@@ -32,6 +34,7 @@
   {
     "id": 3,
     "name": "Andrea Lavoro",
+    "photo": "../athletesPhoto/noPhoto.png",
     "email": "andrea@gmail.com",
     "birthdate": "1990-01-01",
     "height": 179,
@@ -47,6 +50,7 @@
   {
     "id": 4,
     "name": "John Florence",
+    "photo": "../athletesPhoto/john.png",
     "email": "john@gmail.com",
     "birthdate": "1990-01-01",
     "height": 179,
@@ -62,6 +66,7 @@
   {
     "id": 5,
     "name": "Griffin Colapinto",
+    "photo": "../athletesPhoto/griffin.png",
     "email": "griffin@gmail.com",
     "birthdate": "1990-01-01",
     "height": 179,
