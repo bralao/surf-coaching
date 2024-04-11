@@ -11,9 +11,11 @@
 }
 .athletes-navbar{
   margin-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   justify-content: space-evenly;
   display: flex;
+  border-bottom: 1px solid #bababa;
 }
 
 .add-btn{
@@ -32,7 +34,7 @@
 }
 
 .current-btn, .archive-btn {
-  padding: 10px 50px 10px 50px;
+  padding: 0 50px 10px 50px;
   font-size: 15px;
   background-color: transparent;
   border: none;
@@ -74,20 +76,14 @@
   .title h1{
     font-size: 30px;
     padding-right: 0;
-    margin-top: 25px;
-    margin-left: 100px;
-  }
-  .athletes-top-bar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
   }
   .athletes-navbar{
-    margin-top: 30px;
-    margin-left: 20px;
-    gap: 30px;
+    gap: 20px;
   }
+  .skill-filter, .search-filter{
+    width: 200%;
+  }
+
 }
 
 @media (min-width: 800px) {

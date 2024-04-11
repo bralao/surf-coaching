@@ -9,20 +9,21 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Athletes = () => {
+
   const [skillLevel, setSkillLevel] = useState('All Levels');
   const [searchQuery, setSearchQuery] = useState(null);
   const [athleteData, setAthleteData] = useState([]);
 
   const handleSkillLevelChange = (event) => {
-    setSkillLevel(event.target.value);
+    setSkillLevel(event.target.value); // sets the state
   };
 
   useEffect(() => {
     const fetchAthleteData = async () => {
       try {
-        const response = await fetch('/athletes.json');
-        const data = await response.json();
-        setAthleteData(data);
+        const response = await fetch('/athletes.json'); // fetch the athletes data from the jsonfile
+        const data = await response.json(); // convert the response to json
+        setAthleteData(data); // set the athlete data to the data we fetched
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -30,9 +31,9 @@ const Athletes = () => {
     fetchAthleteData();
   }, []);
 
-  const filteredAthletes = skillLevel !== 'All Levels'
-  ? athleteData.filter(athlete => athlete.skillLevel === skillLevel)
-  : athleteData;
+  const filteredAthletes = skillLevel !== 'All Levels' // if skillLevel is not 'All Levels', filter the athletes by skill level
+  ? athleteData.filter(athlete => athlete.skillLevel === skillLevel) // filter the athletes by skill level
+  : athleteData; // if skillLevel is 'All Levels', show all athletes
 
   return (
     <div className="athletes">
@@ -44,7 +45,19 @@ const Athletes = () => {
         </div>
 
         <div className="athletes-navbar">
-          <Box sx={{ minWidth: 140 }}>
+          <Box className="search-filter" sx={{ minWidth: 170 }}>
+            <Autocomplete
+              disablePortal
+              id="athlete-search"
+              options={["Miguel", "Beatriz"]}
+              value={searchQuery}
+              onChange={(event, newValue) => {
+                setSearchQuery(newValue);
+              }}
+              renderInput={(params) => <TextField {...params} label="Search by name" />}
+            />
+          </Box>
+          <Box className="skill-filter" sx={{ minWidth: 140 }}>
             <TextField
               select
               label="Skill Level"
@@ -58,18 +71,6 @@ const Athletes = () => {
               <MenuItem value="Intermediate">Intermediate</MenuItem>
               <MenuItem value="Beginner">Beginner</MenuItem>
             </TextField>
-          </Box>
-          <Box className="search-name-box" sx={{ width: 170 }}>
-            <Autocomplete
-              disablePortal
-              id="athlete-search"
-              options={["Miguel", "Beatriz"]}
-              value={searchQuery}
-              onChange={(event, newValue) => {
-                setSearchQuery(newValue);
-              }}
-              renderInput={(params) => <TextField {...params} label="Search" />}
-            />
           </Box>
           <FontAwesomeIcon icon={faPlus} className="add-btn" />
         </div>
