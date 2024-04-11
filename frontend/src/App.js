@@ -1,13 +1,13 @@
 import './App.css';
 import React from 'react'
-import SideBar from './components/sideBar/sideBar'
+import Navbar from './components/navbar/navbar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Overview from './pages/Overview'
 import Calendar from './pages/Calendar'
 import Sessions from './pages/Sessions'
 import Athletes from './pages/Athletes'
 import User from './pages/User'
-import AthleteProfile from './components/athleteprofile/AthleteProfile'
+import AthleteProfile from './components/athleteProfile/AthleteProfile'
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
               <Route path="/athletes/:id" element={<AthleteProfile/>} />
             </Routes>
           </div>
-          <SideBar className="sidebar"/>
+          <Navbar className="navbar"/>
         </BrowserRouter>
       </div>
     </div>
