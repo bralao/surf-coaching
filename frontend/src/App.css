@@ -17,7 +17,7 @@
   padding: 2px;
 }
 
-.sidebar{
+.navbar{
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -38,7 +38,7 @@
     width: calc(100% - 80px);
   }
 
-  .sidebar{
+  .navbar{
     background-color: #e2e1e1;
     width: 60px;
     height: 44%;
@@ -49,7 +49,7 @@
 }
 
 @media (min-width: 800px) {
-  .sidebar{
+  .navbar{
     height: 426px;
     width: 70px;
   }

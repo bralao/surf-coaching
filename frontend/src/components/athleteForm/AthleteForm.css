@@ -1,0 +1,14 @@
+.athlete-form {
+  display: flex;
+  flex-direction: column; /* Assuming you want vertical stacking */
+}
+
+.athlete-form .form-field{
+  margin-top: 10px;
+  width: 100%;
+}
+
+.athlete-form .submit-btn {
+  margin-top: 20px;
+  width: 100%;
+}

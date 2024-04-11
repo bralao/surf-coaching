@@ -7,12 +7,15 @@ import MenuItem from '@mui/material/MenuItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import AthleteForm from '../components/athleteForm/AthleteForm';
 
 const Athletes = () => {
 
   const [skillLevel, setSkillLevel] = useState('All Levels');
   const [searchQuery, setSearchQuery] = useState(null);
   const [athleteData, setAthleteData] = useState([]);
+  const [showForm, setShowForm] = useState(false);
+
 
   const handleSkillLevelChange = (event) => {
     setSkillLevel(event.target.value); // sets the state
@@ -41,6 +44,10 @@ const Athletes = () => {
       (skillLevel === 'All Levels' || athlete.skillLevel === skillLevel) &&
       filterByName(athlete)
   );
+
+  const handleAddAthleteClick = () => {
+    setShowForm(true);
+  };
 
 
   return (
@@ -80,7 +87,7 @@ const Athletes = () => {
               <MenuItem value="Beginner">Beginner</MenuItem>
             </TextField>
           </Box>
-          <FontAwesomeIcon icon={faPlus} className="add-btn" />
+          <FontAwesomeIcon icon={faPlus} className="add-btn" onClick={handleAddAthleteClick} />
         </div>
       </div>
 
@@ -100,6 +107,13 @@ const Athletes = () => {
         ))}
       </div>
 
+      {showForm && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <AthleteForm />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

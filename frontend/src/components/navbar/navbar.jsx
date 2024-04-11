@@ -1,50 +1,50 @@
 import React, { useState } from 'react'
-import './sideBar.css'
+import './navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faCalendarDays, faClipboard, faUser, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom'
 
 
-const SideBar = () => {
+const Navbar = () => {
 
   const [selectedIcon, setSelectedIcon] = useState('home');
 
 
   return (
-    <div className="sidebar">
-      <div className="sidebar-icons">
+    <div className="navbar">
+      <div className="navbar-icons">
         <Link to="/">
           <FontAwesomeIcon
             icon={faHouse}
-            className={`sidebar-icon ${selectedIcon === 'home' ? 'selected' : ''}`}
+            className={`navbar-icon ${selectedIcon === 'home' ? 'selected' : ''}`}
             onClick={() => setSelectedIcon('home')}
           />
         </Link>
         <Link to="/calendar">
           <FontAwesomeIcon
             icon={faCalendarDays}
-            className={`sidebar-icon ${selectedIcon === 'calendar' ? 'selected' : ''}`}
+            className={`navbar-icon ${selectedIcon === 'calendar' ? 'selected' : ''}`}
             onClick={() => setSelectedIcon('calendar')}
           />
         </Link>
         <Link to="/sessions">
           <FontAwesomeIcon
             icon={faClipboard}
-            className={`sidebar-icon ${selectedIcon === 'sessions' ? 'selected' : ''}`}
+            className={`navbar-icon ${selectedIcon === 'sessions' ? 'selected' : ''}`}
             onClick={() => setSelectedIcon('sessions')}
           />
         </Link>
         <Link to="/athletes">
           <FontAwesomeIcon
             icon={faUsers}
-            className={`sidebar-icon ${selectedIcon === 'athletes' ? 'selected' : ''}`}
+            className={`navbar-icon ${selectedIcon === 'athletes' ? 'selected' : ''}`}
             onClick={() => setSelectedIcon('athletes')}
           />
         </Link>
         <Link to="/user">
           <FontAwesomeIcon
             icon={faUser}
-            className={`sidebar-icon ${selectedIcon === 'user' ? 'selected' : ''}`}
+            className={`navbar-icon ${selectedIcon === 'user' ? 'selected' : ''}`}
             onClick={() => setSelectedIcon('user')}
           />
         </Link>
@@ -53,4 +53,4 @@ const SideBar = () => {
   )
 }
 
-export default SideBar
+export default Navbar
