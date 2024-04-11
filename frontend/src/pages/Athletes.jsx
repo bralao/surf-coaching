@@ -29,11 +29,19 @@ const Athletes = () => {
       }
     };
     fetchAthleteData();
-  }, []);
+  },);
 
-  const filteredAthletes = skillLevel !== 'All Levels' // if skillLevel is not 'All Levels', filter the athletes by skill level
-  ? athleteData.filter(athlete => athlete.skillLevel === skillLevel) // filter the athletes by skill level
-  : athleteData; // if skillLevel is 'All Levels', show all athletes
+  const filterByName = (athlete) => {
+    if (!searchQuery) return true;
+    return athlete.name.toLowerCase().includes(searchQuery.toLowerCase());
+  };
+
+  const filteredAthletes = athleteData.filter(
+    (athlete) =>
+      (skillLevel === 'All Levels' || athlete.skillLevel === skillLevel) &&
+      filterByName(athlete)
+  );
+
 
   return (
     <div className="athletes">
@@ -49,7 +57,7 @@ const Athletes = () => {
             <Autocomplete
               disablePortal
               id="athlete-search"
-              options={["Miguel", "Beatriz"]}
+              options={athleteData.map((athlete) => athlete.name)}
               value={searchQuery}
               onChange={(event, newValue) => {
                 setSearchQuery(newValue);
@@ -83,8 +91,8 @@ const Athletes = () => {
 
       <div className="athlete-list">
         {filteredAthletes.map((athlete, index) => (
-          <Link to={`/athletes/${athlete.id}`}>
-            <div className="athlete-item" key={index}>
+          <Link to={`/athletes/${athlete.id}`} key={athlete.id}>
+            <div className="athlete-item">
               <img src={athlete.photo} alt="athlete" />
               <p>{athlete.name}</p>
             </div>
