@@ -12,7 +12,7 @@ const AthleteForm = () => {
       <div className="top-bar">
         <div/>
         <h1>New Athlete</h1>
-        <FontAwesomeIcon icon={faCircleXmark} />
+        <FontAwesomeIcon className="exit-btn" icon={faCircleXmark} />
       </div>
 
       <FormControl>
