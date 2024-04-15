@@ -49,6 +49,9 @@ const Athletes = () => {
     setShowForm(true);
   };
 
+  const handleCloseForm = () => {
+    setShowForm(false);
+  };
 
   return (
     <div className="athletes">
@@ -110,7 +113,7 @@ const Athletes = () => {
       {showForm && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <AthleteForm />
+            <AthleteForm onClose={handleCloseForm}/>
           </div>
         </div>
       )}
