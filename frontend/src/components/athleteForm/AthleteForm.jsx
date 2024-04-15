@@ -5,14 +5,14 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
-const AthleteForm = () => {
+const AthleteForm = ({onClose}) => {
   return (
     <div className="athlete-form">
 
       <div className="top-bar">
         <div/>
         <h1>New Athlete</h1>
-        <FontAwesomeIcon className="exit-btn" icon={faCircleXmark} />
+        <FontAwesomeIcon className="exit-btn" icon={faCircleXmark} onClick={onClose}/>
       </div>
 
       <FormControl>
