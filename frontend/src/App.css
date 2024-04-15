@@ -26,7 +26,7 @@
   padding-bottom: 20px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
   .main-layout{
     flex-direction: row;
     width: 100%;
@@ -37,7 +37,6 @@
     padding-right: 10px;
     width: calc(100% - 80px);
   }
-
   .navbar{
     background-color: #e2e1e1;
     width: 60px;
@@ -46,9 +45,6 @@
     margin-top: 220px;
     margin-right: 10px;
   }
-}
-
-@media (min-width: 800px) {
   .navbar{
     height: 426px;
     width: 70px;

@@ -20,14 +20,11 @@
   color: #3f3f3f;
 }
 
-@media (min-width: 500px){
+@media (min-width: 800px) {
   .navbar-icons {
     flex-direction: column;
     margin-top: 30px;
   }
-}
-
-@media (min-width: 800px) {
   .navbar-icons {
     margin-top: 30px;
   }
