@@ -1,6 +1,20 @@
 .athlete-form {
   display: flex;
-  flex-direction: column; /* Assuming you want vertical stacking */
+  flex-direction: column;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-bar h1 {
+  margin-left: 20px;
+}
+
+.exit-btn{
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .athlete-form .form-field{
