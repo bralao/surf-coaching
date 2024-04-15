@@ -45,7 +45,7 @@ const Athletes = () => {
       filterByName(athlete)
   );
 
-  const handleAddAthleteClick = () => {
+  const handleOpenForm = () => {
     setShowForm(true);
   };
 
@@ -90,7 +90,7 @@ const Athletes = () => {
               <MenuItem value="Beginner">Beginner</MenuItem>
             </TextField>
           </Box>
-          <FontAwesomeIcon icon={faPlus} className="add-btn" onClick={handleAddAthleteClick} />
+          <FontAwesomeIcon icon={faPlus} className="add-btn" onClick={handleOpenForm} />
         </div>
       </div>
 
