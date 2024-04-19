@@ -32,7 +32,7 @@ const Athletes = () => {
       }
     };
     fetchAthleteData();
-  },);
+  }, []); // empty array means it will only run once when the component mounts
 
   const filterByName = (athlete) => {
     if (!searchQuery) return true;
