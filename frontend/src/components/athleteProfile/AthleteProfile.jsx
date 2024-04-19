@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 const AthleteProfile = () => {
   const { id } = useParams();
   const [athlete, setAthlete] = useState(null);
-  const [activeTab, setActiveTab] = useState('profile'); // Default to 'profile'
+  const [activeTab, setActiveTab] = useState('profile');
 
   useEffect(() => {
     const fetchAthlete = async () => {
