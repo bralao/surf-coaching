@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './AthleteProfile.css';
 
 const AthleteProfile = () => {
   const { id } = useParams();
@@ -24,49 +25,64 @@ const AthleteProfile = () => {
     setActiveTab(tab);
   };
 
+
+// to display the current month in the Monthly Objective
+const currentDate = new Date();
+const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
+const result = `Monthly Objective (${currentMonth})`;
+console.log(result);
+
+
   return (
-    <div className="athlete-profile">
-      <div className="athlete-title">
+    <div className="athlete">
+
+      <div className="athlete-name">
+        <div className=""></div>
         <h2>{athlete && athlete.name}</h2>
+        <div/>
       </div>
+
       <div className="athlete-navbar">
         <button onClick={() => handleTabChange('profile')}>Profile</button>
-        <button onClick={() => handleTabChange('stats')}>Stats</button>
+        <button onClick={() => handleTabChange('objectives')}>Objectives</button>
         <button onClick={() => handleTabChange('sessions')}>Sessions</button>
         <button onClick={() => handleTabChange('competitions')}>Competitions</button>
       </div>
       {athlete && (
         <>
           {activeTab === 'profile' && (
-            <div>
-              <img src={athlete.photo} alt={athlete.name} />
-              <p>{athlete.skillLevel}</p>
-              <hr/>
-              <p>{athlete.email}</p>
-              <p>{athlete.phone}</p>
-              <p>{athlete.birthdate}</p>
-              <p>{athlete.height} cm</p>
-              <p>{athlete.weight} kg</p>
-
+            <div className="athlete-profile">
+              <img src={athlete.photo} alt={athlete.name} className="athlete-photo"/>
+              <p>Level: {athlete.skillLevel}</p>
+              <p>Email: {athlete.email}</p>
+              <p>Phone: {athlete.phone}</p>
+              <p>Birthdate: {athlete.birthdate}</p>
+              <p>Height: {athlete.height} cm</p>
+              <p>Weight {athlete.weight} kg</p>
+              <p>Surfboards Log</p>
             </div>
           )}
-          {activeTab === 'stats' && (
+          {activeTab === 'objectives' && (
             <div>
-              <p>{athlete.personalObjective}</p>
-              <p>{athlete.monthObjective}</p>
-              <p>{athlete.threeMonthsObjective}</p>
-              <p>{athlete.averageWavesPerSession}</p>
+              <p>Personal: {athlete.personalObjective}</p>
+              <p>{currentMonth}: {athlete.monthObjective}</p>
+              <p>Next three months: {athlete.threeMonthsObjective}</p>
+              <p>Average waves per session {athlete.averageWavesPerSession}</p>
             </div>
           )}
           {activeTab === 'sessions' && (
             <div>
-              <p>{athlete.sessionsCompleted}</p>
-              <p>{athlete.sessionsMissed}</p>
+              <p>show scheduled sessions here</p>
+              <hr/>
+              <p>Completed: {athlete.sessionsCompleted}</p>
+              <p>Missed{athlete.sessionsMissed}</p>
             </div>
           )}
           {activeTab === 'competitions' && (
             <div>
-              competitions scheduled / completed
+              <p>show scheduled sessions here</p>
+              <hr/>
+
             </div>
           )}
         </>
