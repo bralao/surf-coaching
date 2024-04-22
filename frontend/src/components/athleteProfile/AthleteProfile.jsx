@@ -65,9 +65,8 @@ console.log(result);
           {activeTab === 'objectives' && (
             <div>
               <p>Personal: {athlete.personalObjective}</p>
-              <p>{currentMonth}: {athlete.monthObjective}</p>
+              <p>{currentMonth} objective: {athlete.monthObjective}</p>
               <p>Next three months: {athlete.threeMonthsObjective}</p>
-              <p>Average waves per session {athlete.averageWavesPerSession}</p>
             </div>
           )}
           {activeTab === 'sessions' && (
@@ -76,6 +75,8 @@ console.log(result);
               <hr/>
               <p>Completed: {athlete.sessionsCompleted}</p>
               <p>Missed{athlete.sessionsMissed}</p>
+              <hr/>
+              <p>Average waves per session {athlete.averageWavesPerSession}</p>
             </div>
           )}
           {activeTab === 'competitions' && (
