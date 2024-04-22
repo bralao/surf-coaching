@@ -1,8 +1,25 @@
-.athlete-name h2{
+.athlete-top {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.athlete-top h2{
   font-size: 24px;
   font-weight: 700;
+}
+
+.back-btn, .edit-btn{
+  padding: 12px;
+  font-size: 25px;
+  color: #bababa;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.back-btn:hover, .edit-btn:hover{
+  color: #3f3f3f;
 }
 
 .athlete-navbar {
@@ -17,6 +34,11 @@
   border-radius: 5px;
   padding: 12px;
   background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.athlete-navbar button:hover{
+  border: 1px solid #3f3f3f;
 }
 
 .athlete-navbar button:hover{

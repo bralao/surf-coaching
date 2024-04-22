@@ -5,7 +5,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import AthleteForm from '../components/athleteForm/AthleteForm';
 
@@ -90,7 +90,7 @@ const Athletes = () => {
               <MenuItem value="Beginner">Beginner</MenuItem>
             </TextField>
           </Box>
-          <FontAwesomeIcon icon={faPlus} className="add-btn" onClick={handleOpenForm} />
+          <FontAwesomeIcon icon={faCirclePlus} className="add-btn" onClick={handleOpenForm} />
         </div>
       </div>
 
