@@ -27,6 +27,12 @@
   width: 100%;
 }
 
+.athlete-profile button {
+  margin-top: 10px;
+  width: 100%;
+  
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
