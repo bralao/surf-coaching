@@ -4,12 +4,13 @@ import './AthleteProfile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronLeft, faUserPen } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
-
+import AthleteForm from '../athleteForm/AthleteForm';
 
 const AthleteProfile = () => {
   const { id } = useParams();
   const [athlete, setAthlete] = useState(null);
   const [activeTab, setActiveTab] = useState('profile');
+  const [showForm, setShowForm] = useState(false);
 
   const navigate = useNavigate();
 
@@ -31,23 +32,25 @@ const AthleteProfile = () => {
     setActiveTab(tab);
   };
 
+  // to display the current month in the Monthly Objective
+  const currentDate = new Date();
+  const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
 
-// to display the current month in the Monthly Objective
-const currentDate = new Date();
-const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
+  const handleOpenForm = () => {
+    setShowForm(true);
+  };
 
-
-
+  const handleCloseForm = () => {
+    setShowForm(false);
+  };
 
   return (
     <div className="athlete">
-
       <div className="athlete-top">
         <FontAwesomeIcon icon={faCircleChevronLeft} className="back-btn" onClick={() => navigate(-1)} />
         <h2>{athlete && athlete.name}</h2>
-        <FontAwesomeIcon icon={faUserPen} className="edit-btn" onClick="" />
+        <FontAwesomeIcon icon={faUserPen} className="edit-btn" onClick={handleOpenForm} />
       </div>
-
       <div className="athlete-navbar">
         <button onClick={() => handleTabChange('profile')}>Profile</button>
         <button onClick={() => handleTabChange('objectives')}>Objectives</button>
@@ -89,10 +92,16 @@ const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
             <div>
               <p>show scheduled sessions here</p>
               <hr/>
-
             </div>
           )}
         </>
+      )}
+      {showForm && athlete && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <AthleteForm onClose={handleCloseForm} defaultValues={athlete} editMode/>
+          </div>
+        </div>
       )}
     </div>
   );
