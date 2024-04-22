@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './AthleteProfile.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleChevronLeft, faUserPen } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
+
 
 const AthleteProfile = () => {
   const { id } = useParams();
   const [athlete, setAthlete] = useState(null);
   const [activeTab, setActiveTab] = useState('profile');
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAthlete = async () => {
@@ -29,17 +35,17 @@ const AthleteProfile = () => {
 // to display the current month in the Monthly Objective
 const currentDate = new Date();
 const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
-const result = `Monthly Objective (${currentMonth})`;
-console.log(result);
+
+
 
 
   return (
     <div className="athlete">
 
-      <div className="athlete-name">
-        <div className=""></div>
+      <div className="athlete-top">
+        <FontAwesomeIcon icon={faCircleChevronLeft} className="back-btn" onClick={() => navigate(-1)} />
         <h2>{athlete && athlete.name}</h2>
-        <div/>
+        <FontAwesomeIcon icon={faUserPen} className="edit-btn" onClick="" />
       </div>
 
       <div className="athlete-navbar">
@@ -65,8 +71,8 @@ console.log(result);
           {activeTab === 'objectives' && (
             <div>
               <p>Personal: {athlete.personalObjective}</p>
-              <p>{currentMonth} objective: {athlete.monthObjective}</p>
-              <p>Next three months: {athlete.threeMonthsObjective}</p>
+              <p><b>{currentMonth}</b> Objective: {athlete.monthObjective}</p>
+              <p>Next Three Months: {athlete.threeMonthsObjective}</p>
             </div>
           )}
           {activeTab === 'sessions' && (

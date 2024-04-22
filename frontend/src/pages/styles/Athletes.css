@@ -16,20 +16,17 @@
   justify-content: space-evenly;
   display: flex;
   border-bottom: 1px solid #bababa;
+  align-items: center;
 }
 
 .add-btn{
-  padding: 12px;
-  font-size: 30px;
+  font-size: 40px;
   color: #bababa;
-  border: 1px solid #bababa;
-  border-radius: 100px;
   cursor: pointer;
 }
 
 .add-btn:hover{
   color: #3f3f3f;
-  border: 1px solid #3f3f3f;
 }
 
 .current-archive-filter{
