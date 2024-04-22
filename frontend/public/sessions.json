@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "date": "2019-01-01",
+    "startTime": "09:00",
+    "location": "Coxos",
+    "athletes": [
+      {
+        "id": 1,
+        "name": "Filippo Gallizia"
+      },
+      {
+        "id": 2,
+        "name": "Vasco Berger"
+      },
+      {
+        "id": 4,
+        "name": "John Florence"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "location": "Pipeline",
+    "date": "2019-01-10",
+    "startTime": "08:30",
+    "athletes": [
+      {
+        "id": 3,
+        "name": "Andrea Lavoro"
+      },
+      {
+        "id": 4,
+        "name": "John Florence"
+      }
+    ]
+  }
+]
