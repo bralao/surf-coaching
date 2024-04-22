@@ -57,18 +57,26 @@ const AthleteProfile = () => {
         <button onClick={() => handleTabChange('sessions')}>Sessions</button>
         <button onClick={() => handleTabChange('competitions')}>Competitions</button>
       </div>
+    <div className="athlete-content">
       {athlete && (
         <>
           {activeTab === 'profile' && (
             <div className="athlete-profile">
-              <img src={athlete.photo} alt={athlete.name} className="athlete-photo"/>
-              <p>Level: {athlete.skillLevel}</p>
-              <p>Email: {athlete.email}</p>
-              <p>Phone: {athlete.phone}</p>
-              <p>Birthdate: {athlete.birthdate}</p>
-              <p>Height: {athlete.height} cm</p>
-              <p>Weight {athlete.weight} kg</p>
-              <p>Surfboards Log</p>
+              <div className="profile-info">
+                <img src={athlete.photo} alt={athlete.name} className="athlete-photo"/>
+                <p>Level: {athlete.skillLevel}</p>
+                <p>Email: {athlete.email}</p>
+                <p>Phone: {athlete.phone}</p>
+                <p>Birthdate: {athlete.birthdate}</p>
+                <p>Height: {athlete.height} cm</p>
+                <p>Weight {athlete.weight} kg</p>
+              </div>
+              <div>
+                <button className="quiver-btn">Quiver</button>
+              </div>
+              <div>
+                <button className="archive-surfer-btn">Archive Surfer</button>
+              </div>
             </div>
           )}
           {activeTab === 'objectives' && (
@@ -96,6 +104,7 @@ const AthleteProfile = () => {
           )}
         </>
       )}
+    </div>
       {showForm && athlete && (
         <div className="modal-overlay">
           <div className="modal-content">
